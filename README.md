@@ -1,36 +1,38 @@
-# Kavun
+# Pico Tester
 
-[![Build Status](https://travis-ci.org/SengitU/kavun.svg?branch=master)](https://travis-ci.org/sengitu/kavun)
+Pico Tester is a small and fast spec runner for Javascript. 
+Mocha and Jest all bring too much burden along, either from history or features.
+This library is a reset. Using the least needed for a test runner.
 
-Kavun is a lightweight spec runner library for Javascript. See the [ADRs][adrs] and [tenets](#tenets) below for understanding what drives and steers this project.
+See the [ADRs][adrs] and [tenets](#tenets) below for understanding what drives and steers this project.
 
 [adrs]: ./docs/adr
 
-## The Real Kavun
+## History - The Real Kavun
 
-The project is named after my elder cat Kavun.
-
-![](kavun_tiny.png)
+The project is a fork of [@SengitU](https://github.com/SengitU)'s project [Kavun](https://github.com/SengitU/kavun).
+He started this project during his apprenticeship at HolidayCheck, to build a tiny, lightweight
+test runner, to figure out what a test runner really just needs.
 
 ## Installation
 
-`npm install kavun`
+`npm install pico-tester`
 
 ### Usage Examples
 
 * Run the tests just for one file do  
-  `kavun test-files.spec.js`
+  `pt test-files.spec.js`
 * or multiple files   
-  `kavun test1.spec.js 2.spec.js test/3.spec.js`
+  `py test1.spec.js 2.spec.js test/3.spec.js`
 * or for all `.js` files (use you command line's file grep features, e.g. `*` or `**` etc.)  
-  `kavun *.js`
+  `pt *.js`
 * for all files found in root and up to 2 sub-directories, ending in `.js`  
-  `kavun {,**,**/**}/*.js`
+  `pt {,**,**/**}/*.js`
 * and mix any of the above  
-  `kavun test-files.spec.js {,**,**/**}/*.js`
+  `pt test-files.spec.js {,**,**/**}/*.js`
 
-Kavun does not contain any file-grep functionality. Use your command line's 
-grep and/or file finding features. This was done to remove kavun's complexity.
+Pico-tester does not contain any file-grep functionality. Use your command line's 
+grep and/or file finding features. This was done to remove pico-tester's complexity.
 
 ### Parameters
 
@@ -44,7 +46,7 @@ A sync example for unit
 
 ```js
 import assert from 'assert';
-import { it } from 'kavun';
+import { it } from 'pico-tester';
 
 it('Example `it`', () => {
   const expected = 2;
@@ -57,7 +59,7 @@ An async example with async/await
 
 ```js
 import assert from 'assert';
-import { it } from 'kavun';
+import { it } from 'pico-tester';
 
 it('Example async `it` with async / await', async () => {
   const actual = () => new Promise(resolve => resolve(true));
@@ -72,7 +74,7 @@ An async example with Promise, don't forget to return the `promise`
 
 ```js
 import assert from 'assert';
-import { it } from 'kavun';
+import { it } from 'pico-tester';
 
 it('Example async `it` with async / await', () => {
   const actual = () => new Promise(resolve => resolve(true));
@@ -100,7 +102,7 @@ it('Example `it` with extended timeout', async () => {
 
 ```js
 import assert from 'assert';
-import { describe, it } from 'kavun';
+import { describe, it } from 'pico-tester';
 
 describe('Example Spec', () => {
   it('unit', () => {
