@@ -14,6 +14,8 @@
     "url": "git+https://github.com/SengitU/kavun.git"
   },
   "keywords": [
+    "pt",
+    "pico-tester",
     "kavun",
     "javascript",
     "js",
@@ -38,7 +40,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "esm": "^3.0.84",
-    "minimist": "^1.2.0"
+    "esm": "^3.2.25",
+    "minimist": "^1.2.5"
   }
 }
