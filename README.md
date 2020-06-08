@@ -1,8 +1,9 @@
 # Pico Tester
 
 Pico Tester is a small and fast spec runner for Javascript. 
-Mocha and Jest all bring too much burden along, either from history or features.
+Mocha, Jest, etc. bring too much burden along, either from history or features.
 This library is a reset. Using the least needed for a test runner.
+Also in terms of dependencies pico-tester tries to use the least needed.
 
 See the [ADRs][adrs] and [tenets](#tenets) below for understanding what drives and steers this project.
 
@@ -135,29 +136,23 @@ describe('Example Spec', () => {
 The following describes how to (help) develop this code.
 
 ## Setup and run
-
 Project requires NodeJS to be installed.
 
 - `cd <here>`
-- (if you want a reproducable env using nix) run `nix-shell`
+- (if you want a reproducable env using docker) run `./run.sh bash`
 - `npm i` to install
 - `npm test` to run all the tests
 - develop ...
 
-## Install/setup, via nix
-
-The project can be built and run locally using nix, to reproduce the environment.
-1) Make sure to have nix installed (see [nixos.org/nix][nix]) and then
+## Install/setup, via docker
+The project can be built and run locally using docker, to have a reproducable environment.
+1) Make sure to have docker installed https://www.docker.com/get-started
 1) `cd <project-dir>`
-1) run `nix-shell` and you should have the environment up and running
+1) start a container using `./run.sh bash` it should setup the environment and provide a bash inside the container
 1) install all node modules using `npm install`
 1) prove that it works, `npm test`
-1) now you have a shell with a deterministic environment (incl. node version)
-
-[nix]: http://nixos.org/nix/
 
 ## Releasing
-
 You want to know if you are ready to release a new version. 
 Run `npm run releasable --silent`, this starts a script that checks the [CHANGELOG.md](./CHANGELOG.md), which
 is your to-do list! What, to-do list? Yes. See below how and why?
