@@ -11,7 +11,7 @@
 - [x] Move the changelog-checker into own repo (it is https://github.com/wolframkriesing/to-do-list-checker)
 - [x] Improvement: Simplified the `npm test` command a bit, and use a (pure) linux command, not a certain shell
 - [x] Render the result a bit easier to parse, use color(s), red/green or emojis like ✅ and ❌ to indicate result
-- [ ] Replace `kavun` with `pt` or `pico-tester` where appropriate
+- [x] Replace `kavun` with `pt` or `pico-tester` where appropriate
 
 # version 3.0
 - [x] move tests inside lib directory, close to the source

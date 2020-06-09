@@ -1,17 +1,17 @@
 {
-  "name": "kavun",
-  "version": "3.0.0",
+  "name": "pico-tester",
+  "version": "4.0.0",
   "description": "A test framework for Javascript",
-  "bin": "./lib/kavun-require.js",
+  "bin": "./lib/pt-require.js",
   "scripts": {
-    "test": "node -r esm lib/kavun.js `find ./lib -iname *.spec.js` --reporter=minimal",
+    "test": "node -r esm lib/pt.js `find ./lib -iname *.spec.js` --reporter=minimal",
     "releasable": "to-do-list-checker",
     "preversion": "npm run releasable && npm test",
     "release": "npm version major"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SengitU/kavun.git"
+    "url": "git+https://github.com/wolframkriesing/pico-tester.git"
   },
   "keywords": [
     "pt",
@@ -22,14 +22,19 @@
     "node",
     "test",
     "unit test",
-    "spec runner"
+    "spec runner",
+    "test runner",
+    "mocha",
+    "ava",
+    "jasmine",
+    "jest"
   ],
   "author": "Ugurcan Sengit <ugurcansengit@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SengitU/kavun/issues"
+    "url": "https://github.com/wolframkriesing/pico-tester/issues"
   },
-  "homepage": "https://github.com/SengitU/kavun#readme",
+  "homepage": "https://github.com/wolframkriesing/pico-tester#readme",
   "devDependencies": {
     "to-do-list-checker": "^3.0.0"
   },

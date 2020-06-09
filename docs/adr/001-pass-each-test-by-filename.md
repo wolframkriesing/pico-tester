@@ -12,14 +12,14 @@ This adds complexity to the app itself and requires more code.
 
 ## Decision
 
-Kavun does NOT provide features such as passing wildcard filenames (`*.spec.js`) 
+Pico-tester does NOT provide features such as passing wildcard filenames (`*.spec.js`) 
 or brace expansion (`{,**/**}/*.spec.js`) out of the box. There are command line tools,
 such as the bash shell that do this out of the box and are much better with it.
 Therefore it is recommended to use those for grepping, searching, preparing all files
-that shall be used by kavun as test files.
+that shall be used by pico-tester as test files.
 
 Beside the focus on doing other jobs than test running, a file search feature
-would also require kavun to deal with permissions and file system specialities in 
+would also require pico-tester to deal with permissions and file system specialities in 
 case there are any. All this hazzle can be prevented by only accepting filenames.
 
 ## Consequences
