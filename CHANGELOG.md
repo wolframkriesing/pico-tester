@@ -6,11 +6,11 @@
 - [ ] IDEA: write a codemodder that fixes `beforeEach` etc. and converts them into proper tests!? to become more compatible with mocha
 - [ ] move the time tracking into the reporter, if the reporter wants to do anything fancy with the time, it needs to be in control and a test runner just runs tests does NOT measure or alike
 - [ ] Keep improving tenets!
-- [ ] Render the result a bit easier to parse, use color(s), red/green or emojis like ✅ and ❌ to indicate result
 
 # version 4.0
 - [x] Move the changelog-checker into own repo (it is https://github.com/wolframkriesing/to-do-list-checker)
 - [x] Improvement: Simplified the `npm test` command a bit, and use a (pure) linux command, not a certain shell
+- [x] Render the result a bit easier to parse, use color(s), red/green or emojis like ✅ and ❌ to indicate result
 - [ ] Replace `kavun` with `pt` or `pico-tester` where appropriate
 
 # version 3.0
