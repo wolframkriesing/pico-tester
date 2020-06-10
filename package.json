@@ -5,7 +5,7 @@
   "bin": "./lib/pt-require.js",
   "scripts": {
     "test": "node -r esm lib/pt.js `find ./lib -iname *.spec.js` --reporter=minimal",
-    "releasable": "to-do-list-checker",
+    "releasable": "todo-stitcher",
     "preversion": "npm run releasable && npm test",
     "release": "npm version major"
   },
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/wolframkriesing/pico-tester#readme",
   "devDependencies": {
-    "to-do-list-checker": "^3.0.0"
+    "todo-stitcher": "git+https://git@github.com/wolframkriesing/todo-stitcher.git"
   },
   "main": "lib/index.js",
   "directories": {
