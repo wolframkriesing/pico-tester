@@ -2,7 +2,7 @@
   "name": "pico-tester",
   "version": "4.0.0",
   "description": "A test framework for Javascript",
-  "bin": "./lib/pt-require.js",
+  "bin": { "pt" : "./lib/pt-require.js", "pico-tester" : "./lib/pt-require.js" },
   "scripts": {
     "test": "node -r esm lib/pt.js `find ./lib -iname *.spec.js` --reporter=minimal",
     "releasable": "todo-stitcher",
